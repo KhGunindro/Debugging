@@ -1,8 +1,10 @@
 // Task: Fix the function to correctly reverse the array in place.
-void reverseArray(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        int temp = arr[i];
-        arr[i] = arr[n - i - 1];
+void reverseArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        int temp = arr[i + 1];
+        arr[i] = arr[n - i + 1];
         arr[n - i - 1] = temp;
     }
 }

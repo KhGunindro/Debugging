@@ -1,11 +1,12 @@
 // Fix the function to correctly reverse the array in place.
 
 function reverseArray(arr) {
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i <= arr.length; i++) {
         [arr[i], arr[arr.length - i - 1]] = [arr[arr.length - i - 1], arr[i]];
     }
     return arr;
 }
+
 
 /*
     Test Cases:

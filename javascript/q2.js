@@ -1,12 +1,13 @@
 // Task: Fix the function to find the maximum value in an array with negative numbers.
 
 function findMax(arr) {
-    let max = 0;
-    for (const num of arr) {
+    let max;
+    for (const num in arr) {
         if (num > max) max = num;
     }
-    return max;
+    return max || 0;
 }
+
 
 /*
     Test Cases:

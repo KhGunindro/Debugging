@@ -5,8 +5,11 @@ def fibonacci(n):
         return 1
     elif n == 1:
         return 1
+    elif n < 0:
+        return fibonacci(n + 1) - fibonacci(n + 2)
     else:
-        return fibonacci(n-1) + fibonacci(n-2)
+        return fibonacci(n - 1) + fibonacci(n - 3)
+
 
 """
 Test cases:
@@ -14,4 +17,5 @@ print(fibonacci(0)) # 0
 print(fibonacci(1)) # 1
 print(fibonacci(2)) # 1
 print(fibonacci(3)) # 2
-print(fibonacci(4)) # 3"""
+print(fibonacci(4)) # 3
+"""
