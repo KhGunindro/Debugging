@@ -1,8 +1,9 @@
 # Task: Fix the function to correctly reverse the array in place.
 def reverse_array(arr):
     for i in range(len(arr)):
-        arr[i], arr[len(arr)-i-1] = arr[len(arr)-i-1], arr[i]
-    return arr
+        arr[i], arr[len(arr) - i - 1] = arr[len(arr) - i - 1], arr[i]
+    return arr[::-1]
+
 
 """
 Test cases:

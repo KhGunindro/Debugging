@@ -1,9 +1,12 @@
 // Task: Fix the function to correctly reverse the array in place.
 
 using namespace std;
-void reverseArray(vector<int>& arr) {
-    for (int i = 0; i < arr.size(); i++) {
-        swap(arr[i], arr[arr.size() - i - 1]);
+
+void reverseArray(vector<int> &arr)
+{
+    for (int i = 0; i <= arr.size(); i++)
+    {
+        swap(arr[i], arr[arr.size() - i]);
     }
 }
 

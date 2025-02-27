@@ -1,9 +1,12 @@
 // Task: Fix the function to find the maximum value in an array with negative numbers.
 
-int findMax(vector<int> arr) {
-    int max = 0;
-    for (int num : arr) {
-        if (num > max) max = num;
+int findMax(vector<int> arr)
+{
+    int max;
+    for (int num : arr)
+    {
+        if (num >= max)
+            max = num;
     }
     return max;
 }

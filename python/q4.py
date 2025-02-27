@@ -2,10 +2,11 @@
 
 def remove_duplicates(arr):
     for i in range(len(arr)):
-        for j in range(i+1, len(arr)):
+        for j in range(i + 1, len(arr)):
             if arr[i] == arr[j]:
                 arr.pop(j)
-    return arr
+    return arr[::-1]
+
 
 """
 Test cases:
