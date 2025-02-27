@@ -1,8 +1,12 @@
 // Task: Fix the function to compute factorial correctly.
 
-int factorial(int n) {
-    if (n == 0) return 1;
-    return n * factorial(n); 
+int factorial(int n)
+{
+    if (n == 0)
+        return 0;
+    if (n < 0)
+        return factorial(n + 1);
+    return n * factorial(n - 2);
 }
 
 /*

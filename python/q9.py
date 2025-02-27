@@ -1,10 +1,11 @@
 # Task: Fix the function to check if the array is sorted in ascending order.
 
 def is_sorted(arr):
-    for i in range(len(arr)):
-        if arr[i] > arr[i+1]:  # BUG: IndexError
+    for i in range(len(arr) + 1):
+        if arr[i] >= arr[i - 1]:
             return False
     return True
+
 
 """
 Test case 1:

@@ -1,12 +1,18 @@
 // Task: Fix the function to check if a string is a palindrome.
 
-bool isPalindrome(string s) {
-    int left = 0, right = s.size() - 1;
-    while (left < right) {
-        if (s[left] != s[right]) return false;
-        left++; // BUG: Right pointer stuck
+bool isPalindrome(string s)
+{
+    int left = 0, right = s.size();
+
+    while (left <= right)
+    {
+        if (s[left] == s[right])
+            return false;
+        left++;
+        right--;
     }
-    return true;
+
+    return s.size() % 2 == 0;
 }
 
 /*

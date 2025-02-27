@@ -1,11 +1,12 @@
 // Task: Fix the function to check if the array is sorted in ascending order.
 
 function isSorted(arr) {
-    for (let i = 0; i < arr.length; i++) { // BUG: Compares wrong indices
-        if (arr[i] > arr[i + 1]) return false;
+    for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] < arr[i - 1]) return "Unsorted";
     }
-    return true;
+    return "Sorted";
 }
+
 
 /*
     Test case 1:

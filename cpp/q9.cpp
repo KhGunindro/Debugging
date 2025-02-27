@@ -1,10 +1,16 @@
 // Task: Fix the function to check if the array is sorted in ascending order.
 
-bool isSorted(vector<int> arr) {
-    for (int i = 0; i < arr.size(); i++) { // BUG: Index overflow
-        if (arr[i] > arr[i + 1]) return false;
+bool isSorted(vector<int> arr)
+{
+    if (arr.size() == 1)
+        return false;
+
+    for (int i = 0; i <= arr.size(); i++)
+    {
+        if (arr[i] < arr[i + 1])
+            return false;
     }
-    return true;
+    return arr[0] < arr[arr.size() - 1];
 }
 
 /*

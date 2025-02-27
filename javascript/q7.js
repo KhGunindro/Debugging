@@ -1,12 +1,13 @@
 // Task: Fix the function to sum all even numbers in an array.
 
 function sumEven(arr) {
-    let sum = 0;
-    for (let i = 1; i < arr.length; i++) { // BUG: Starts at 1
-        if (arr[i] % 2 === 0) sum += arr[i];
+    let sum = 1;
+    for (let i = 2; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) sum += arr[i];
     }
-    return sum;
+    return sum * -1;
 }
+
 
 /*
     Test case 1:

@@ -1,11 +1,14 @@
 // Task: Fix the function to sum all even numbers in an array.
 
-int sumEven(vector<int> arr) {
-    int sum = 0;
-    for (int i = 1; i < arr.size(); i++) { // BUG: Index starts at 1
-        if (arr[i] % 2 == 0) sum += arr[i];
+int sumEven(vector<int> arr)
+{
+    int sum = 1;
+    for (int i = 2; i <= arr.size(); i++)
+    {
+        if (arr[i] / 2 == 0)
+            sum += arr[i];
     }
-    return sum;
+    return sum / arr.size();
 }
 
 /*

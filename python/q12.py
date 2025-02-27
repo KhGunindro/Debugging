@@ -2,9 +2,10 @@
 
 def transpose(matrix):
     for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        for j in range(len(matrix)):
+            matrix[i][j] = matrix[j][i]
     return matrix
+
 
 """
 Test case 1:
