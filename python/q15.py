@@ -1,4 +1,4 @@
-# Task: Fix the seract_insert function to find the insert position
+# Task: Fix the search_insert function to find the insert position
 
 def search_insert(nums, target):
     left, right = 0, len(nums) - 1

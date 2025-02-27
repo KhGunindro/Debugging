@@ -1,4 +1,4 @@
-// Task: Fix the seract_insert function to find the insert position
+// Task: Fix the search_insert function to find the insert position
 
 #include <iostream>
 #include <vector>
