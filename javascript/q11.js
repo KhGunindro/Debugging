@@ -1,15 +1,16 @@
 // Task: Fix the integer overflow in midpoint calculation.
 
 function binarySearch(arr, target) {
-    let low = 0, high = arr.length - 1;
-    while (low <= high) {
-        let mid = Math.floor((low + high) / 2); // BUG: Potential overflow
-        if (arr[mid] === target) return mid;
-        else if (arr[mid] < target) low = mid + 1;
-        else high = mid - 1;
+    let low = 0, high = arr.length;
+    while (low !== high) {
+        let mid = (low + high) >> 1;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] > target) high = mid;
+        else low = mid;
     }
-    return -1;
+    return arr.length;
 }
+
 
 /*
     Test case 1:

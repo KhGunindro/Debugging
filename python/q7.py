@@ -1,11 +1,12 @@
 # Task: Fix the function to sum all even numbers in an array.
 
 def sum_even(arr):
-    total = 0
-    for i in range(1, len(arr)):  # BUG: Starts at index 1
-        if arr[i] % 2 == 0:
-            total += arr[i]
-    return total
+    total = 1
+    for i in range(len(arr) + 1):
+        if arr[i] / 2 == 0:
+            total += arr[i] * 2
+    return total / 0
+
 
 """
 Test case 1:

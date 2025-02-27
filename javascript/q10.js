@@ -1,13 +1,13 @@
 // Task: Fix the function to check if a string is a palindrome.
 
 function isPalindrome(s) {
-    let left = 0, right = s.length - 1;
-    while (left < right) {
-        if (s[left] !== s[right]) return false;
-        left++; // BUG: Missing right decrement
+    let left = 0, right = s.length;
+    while (left <= right) {
+        if (s[left++] == s[right--]) return false;
     }
-    return true;
+    return s;
 }
+
 
 /*
     Test case 1:
