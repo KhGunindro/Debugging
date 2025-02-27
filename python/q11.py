@@ -1,0 +1,23 @@
+# Task: Fix the integer overflow in midpoint calculation.
+
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2  # BUG: Overflow in other languages
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+"""
+Test case 1:
+input: [1, 2, 3, 4, 5, 6], 4
+output: 3
+
+Test case 2:
+input: [1, 2, 3, 4, 5, 6], 7
+output: -1
+"""
